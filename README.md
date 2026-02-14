@@ -3,8 +3,8 @@
 A minimal Valentine-themed webpage with a fun interactive “No” button that dodges the cursor and a sweet letter page.
 
 ## Live Demo
-After you enable GitHub Pages, your site will be here:  
-`https://<YOUR_USERNAME>.github.io/<REPO_NAME>/`
+Check My Github page:  
+`https://sami-gh05.github.io/valentine-web-page/index.html`
 
 ## Project Structure
 - `index.html` — Main interactive Valentine question
