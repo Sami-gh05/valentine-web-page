@@ -61,5 +61,3 @@ Your site will appear at:
 
 ## License
 Free to use and modify.
-
----
