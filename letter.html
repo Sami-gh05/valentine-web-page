@@ -119,6 +119,33 @@
   </style>
 </head>
 <body>
+    <audio id="loveSong" src="Side by Side.mp3" preload="auto" autoplay loop playsinline></audio>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const loveSong = document.getElementById('loveSong');
+      if (!loveSong) return;
+
+      loveSong.volume = 0.75;
+
+      const startPlayback = () => {
+        loveSong.play().catch(() => {
+          console.warn('Autoplay was blocked. Waiting for user interaction.');
+        });
+      };
+
+      startPlayback();
+
+      const resumeOnInteraction = () => {
+        loveSong.play().catch(() => {});
+        document.removeEventListener('pointerdown', resumeOnInteraction);
+        document.removeEventListener('keydown', resumeOnInteraction);
+      };
+
+      document.addEventListener('pointerdown', resumeOnInteraction, { once: true });
+      document.addEventListener('keydown', resumeOnInteraction, { once: true });
+    });
+  </script>
+
   <svg class="envelope" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M80 80h480a40 40 0 0 1 40 40v240a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V120a40 40 0 0 1 40-40z" stroke="#ff6f91" stroke-width="16" opacity="0.6"/>
     <path d="M80 120l240 160a40 40 0 0 0 48 0l240-160" stroke="#ff6f91" stroke-width="16" opacity="0.4"/>
