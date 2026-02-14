@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Valentine Letter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-top: #ffd2dc;
+      --bg-bottom: #fff0f5;
+      --accent: #ff6f91;
+      --text: #40202b;
+      --card-bg: rgba(255, 255, 255, 0.78);
+      --shadow: rgba(255, 111, 145, 0.2);
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;500&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at top left, var(--bg-top), var(--bg-bottom));
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .envelope {
+      position: absolute;
+      width: 80vmin;
+      max-width: 420px;
+      top: 8%;
+      right: 8%;
+      opacity: 0.08;
+      filter: blur(0.3px);
+    }
+
+    .letter-card {
+      max-width: 640px;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      padding: clamp(2.4rem, 6vw, 3.8rem);
+      border-radius: 32px;
+      box-shadow: 0 50px 80px -60px var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .letter-card::after {
+      content: '💌';
+      position: absolute;
+      font-size: clamp(3rem, 8vw, 5rem);
+      right: clamp(1.2rem, 4vw, 2.4rem);
+      top: clamp(1.2rem, 4vw, 2.4rem);
+      opacity: 0.25;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.1rem, 5vw, 2.8rem);
+      margin-bottom: 0.8rem;
+    }
+
+    h2 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      letter-spacing: 0.2rem;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 2rem;
+    }
+
+    .letter-body {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 2.4rem;
+    }
+
+    .signature {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      margin-top: 1.6rem;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: rgba(64, 32, 43, 0.6);
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 540px) {
+      body {
+        padding: 1.4rem;
+      }
+      .envelope {
+        display: none;
+      }
+      .letter-card::after {
+        opacity: 0.18;
+      }
+    }
+  </style>
+</head>
+<body>
+  <svg class="envelope" viewBox="0 0 640 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M80 80h480a40 40 0 0 1 40 40v240a40 40 0 0 1-40 40H80a40 40 0 0 1-40-40V120a40 40 0 0 1 40-40z" stroke="#ff6f91" stroke-width="16" opacity="0.6"/>
+    <path d="M80 120l240 160a40 40 0 0 0 48 0l240-160" stroke="#ff6f91" stroke-width="16" opacity="0.4"/>
+  </svg>
+
+  <div class="letter-card">
+    <h1>To my favorite human,</h1>
+    <h2>Happy Valentine’s Day</h2>
+    <div class="letter-body">
+      I still remember the very first moment you smiled at me; the whole world softened, and it hasn’t quite gone back to normal since. Every day with you feels like discovering a new shade of joy—like the universe accidentally painted outside the lines and gifted me a masterpiece.<br><br>
+      Thank you for the late-night talks, the shared silences, the uncontrollable laughter, and even the quiet moments when all we do is breathe the same air. You make the ordinary feel poetic and the future feel like a promise I can’t wait to keep.<br><br>
+      So here’s to us—forever learning how to love better, laugh louder, dream bigger, and choose each other again and again. I’m endlessly grateful that you said “yes,” not just today, but every day.<br><br>
+      With all the love my heart can hold,
+      <div class="signature">Yours, always.</div>
+    </div>
+    <div class="footer">
+      <span>14 February 2026</span>
+      <a href="index.html">Back to the question ➺</a>
+    </div>
+  </div>
+</body>
+</html>
